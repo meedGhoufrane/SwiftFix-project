@@ -353,3 +353,46 @@ main{
     width: 1.78513rem;
     height: 2rem;
 }
+.colsefooter{
+    width: 76rem;
+    margin-left: 7rem;
+    background: #094B72;
+    display: flex;
+    justify-content: space-evenly;
+    font-weight: 600;
+    font-family: Poppins;
+    padding-top: 3rem;
+    gap: 12rem;
+}
+.articless{
+    color: #FFF;
+    display: flex;
+    gap: 3rem;
+}
+.contet-art{
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    width: 76rem;
+    height: 5rem;
+    flex-shrink: 0;
+    background: #004D7B;
+    margin-left: 9rem;
+    border: #004D7B 1px solid;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+}
+.footer h2{
+    padding-top: 1rem;
+    font-size: 1rem;
+    color: #FFF;
+    font-weight: 600;
+    font-family: Poppins;
+}
+.footer img{
+    width: 30%;
+    height: 20%;
+}
