@@ -501,6 +501,11 @@ main{
     height: 6rem;
     width: 16rem;
 }
+.list_footer > .list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 .secnd-content{
     background: #F2F7FF;
     display: flex;
@@ -710,6 +715,9 @@ main{
     width: 1.78513rem;
     height: 2rem;
 }
+.btncll img:hover{
+    color: #004D7B;
+}
 .btncll:hover{
     background-color: #F2F7FF;
     color: #004D7B;
@@ -732,7 +740,6 @@ main{
     padding-left: 2.4rem;
     padding-top: 1rem;
     font-size: 1.3rem;
-    text-align: center;
 }
 
 .list{
@@ -745,7 +752,7 @@ main{
     justify-content: space-around;
 }
 .footer h2{
-    padding-top: 1rem;
+    padding-top: 1.3rem;
     font-size: 1rem;
     color: #FFF;
     font-weight: 600;
@@ -753,6 +760,7 @@ main{
 }
 
 .footer img{
+    margin-right: 6rem;
     width: 20%;
     height: 20%;
     padding-top: 1.2rem;
@@ -764,7 +772,7 @@ main{
 }
 .section_foter{
     width: 90rem;
-    height: 20rem;
+    height: 24rem;
     background: #004D7B;
     color: #FFF;
 }
@@ -782,6 +790,14 @@ main{
     justify-content: space-around;
     gap: 1rem;
 }
+.content-about{
+    padding: 0 7rem;
+}
+.img-about > img{
+    padding-right: 2rem;
+    height: 29rem;
+    flex-shrink: 0;
+}
 
 .about-content p {
     padding-top: 8rem;
@@ -789,20 +805,36 @@ main{
 }
 
 .content-server{
-    width: 75rem;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-content{
+    margin-top: 5rem;
     display: flex;
     justify-content: center;
+    gap: 2rem;
 }
 .card-server{
-   border: #000000 solid;
-   gap: 2rem;
-   align-items: center;
+    padding-top: 2rem;
+    text-align: center;
+    width: 21.25rem;
+    height: 23.875rem;
+    border: #000000 solid;
+    border-radius: 1rem;
+}
+.card-server h2{ 
+    font-size: 2em;
+    margin: 0.67em 0;
 }
 .card-server img{
     width: 40%;
     height: 40%;
 }
+
+.btnserves{
+    margin-top: 4rem;
+}
+
+
