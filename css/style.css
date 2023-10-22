@@ -352,11 +352,10 @@
 
 *{  
     box-sizing: border-box;
+    
 }
 
-main{
-   
-} 
+
 
 .navbar img {
     display: inline;
@@ -904,6 +903,48 @@ main{
 .burger-list{
     display: none;
     
+}
+.General-Questions{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.qustions-ccontaner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.qustions-list{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+    color: #FFF;
+    font-family: Poppins ;
+    font-weight: 700;
+    
+
+}
+.qustion-btn > i{
+    color: #fff;
+}
+.qustions-item{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #004D7B;
+    padding: 20px;
+    width: fit-content;
+    font-size: 1.5rem;
+}
+
+.qustions-item > button{
+    background: transparent;
+    border: 1px solid #ffffff;
+    outline: none;
+    font-size: 14px;
 }
 
 /* validation form */
