@@ -383,7 +383,6 @@ main{
     font-family: 'Poppins', sans-serif;
 }
 .navbar-collapse{
-    padding-right: 2rem;
     display: flex;
     align-items: center;
 }
@@ -896,6 +895,7 @@ main{
 .all-inputs > input{
     font-size: 2rem;
     background: #FFF;
+    border: black solid 1px;
     box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .all-inputs label{
@@ -907,13 +907,22 @@ main{
 }
 
 /* validation form */
-small{
-    visibility: hidden;
-}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .navmobile > ul > li{
     list-style: none;
-    padding-top: 1rem;
+    padding-top: 3rem;
 }
 .navmobile > ul > li > a{
     text-decoration: none;
@@ -924,6 +933,7 @@ small{
 }
 .nav-item-mobile img{
     color: #FFF;
+    cursor: pointer;
 }
 .navmobile.is-active{
     left: 0;
@@ -942,6 +952,13 @@ small{
     min-height: 100vh;
     z-index: 99;
 
+}
+.input-search{
+    
+    transform: scaleY(1);
+}
+.input-search.is-actives{
+    transform: scaleY(1);
 }
 
 
@@ -1057,13 +1074,14 @@ small{
 .list_flex{
     flex-direction: column;
     text-align: center;
+    padding-right: 4rem;
 
 }
 .btncll{
     font-size: 1rem;
 }
 .contet-list > h2{
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .list_footer > .list > li{
@@ -1085,7 +1103,32 @@ small{
 .count-matters > h2{
     font-size: 2rem;
 }
+.navbar-nav-mobile{
+    padding-right: 5rem;
 }
+.serch{
+    border: none;
+    background: #09679e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+.search-btn{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-content{
+    flex-direction: column;
+}
+#input-srch{
+    display: none;
+}
+
+}
+
 @media screen and (max-width:587px) {
     html{
         font-size: 9px;

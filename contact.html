@@ -60,7 +60,7 @@
                 <a class="nav-link" href="#">Testimonials</a>
             </li>
             <li class="nav-item-mobile">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item-mobile">
                 <a class="nav-link" href="servers.html">Services</a>
@@ -69,9 +69,14 @@
                 <a class="nav-link"  href="contact.html">Contact</a>
             </li>
             <li class="nav-item-mobile">
-                <span>
-                    <img src="images/search.svg" alt="search">
-                </span>
+                <div class="search-btn">
+                    <div  id="serch-btn" class="serch-svg" onclick="showserchiputs()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#fafafa" class="bi bi-search" viewBox="0 0 16 16"> <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+                    </div>
+                    <div class="input-search">
+                        <input type="text" id="input-srch" class="serch-input">
+                    </div>
+                </div>
             </li>
         </ul>
     </div>
@@ -80,25 +85,26 @@
             <div class="title-contact">
                 <h1>Contact Us</h1>
             </div>
-                <form class="form-list_inputs" action="submit.php" method="post">
+                <form class="form-list_inputs" id="form"  action="" method="">
                     <div class="all-inputs">
                         <label for="first-name">First Name</label>
-                        <input placeholder="enter ur first name" type="text" id="first-name" name="first-name" required>
-                        <small>erreur messge</small>
+                        <input placeholder="enter ur first name" type="text" id="first-name"  name="first-name" required>
+                        <span id="firstnm-error"></span>
                     </div>  
                     <div class="all-inputs">
                         <label for="last-name">Last Name</label>
                         <input placeholder="enter ur last name" type="text" id="last-name" name="last-name" required>
-                        <small>erreur messge</small>
+                        <span class="lastname-error"></span>
                     </div>
                     <div class="all-inputs">  
                         <label for="gmail">Gmail Address</label>
                         <input placeholder="enter ur gmail Address" type="email" id="gmail" name="gmail" required>
-                        <small>erreur messge</small>
+                        <span class="gmail-error"></span>
                     </div>
                     <div class="all-inputs"> 
                         <label for="description">Description</label>
                         <textarea  id="description" name="description" rows="4" required></textarea>
+                        <span class="description-error"></span>
                     </div>
                     <input class="btncll" id="submit" type="submit" value="Submit">
                 </form>
