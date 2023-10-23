@@ -80,7 +80,7 @@ if (myform) {
       errorldiscr.style.fontSize = "2rem";
       errorldiscr.style.textAlign = "center";
     }
-    // else if(discrp.value.length < 10 || discrp.value.length > 200){
+    // else if(discrp.value.lenght < 10 || discrp.value.lenght > 200){
     //   errorldiscr.innerHTML = "Description must be between 10 and 200 characters.";
     //   errorldiscr.style.color = 'red';
     //   errorldiscr.style.fontSize = '2rem';
@@ -89,12 +89,22 @@ if (myform) {
   });
 }
 
-var btnsqustion = document.querySelectorAll(".qustion-btn");
 
-btnsqustion.forEach((button) => {
-  button.addEventListener("click", function (e) {
-    let target = e.target.closest("button");
-    target.children[0].classList.toggle("fa-plus");
-    target.children[0].classList.toggle("fa-minus");
+const questions = document.querySelectorAll(".question");
+
+questions.forEach(function (question) {
+  const btn = question.querySelector(".question-btn");
+  // console.log(btn);
+
+  btn.addEventListener("click", function () {
+    // console.log(question);
+
+    questions.forEach(function (item) {
+      if (item !== question) {
+        item.classList.remove("show-text");
+      }
+    });
+
+    question.classList.toggle("show-text");
   });
 });
