@@ -20,34 +20,59 @@
         <div class="header">
           <nav class="navbar">
             <div class="logosanfinixlogo">
-              <span>
-                <img src="images/Capture.PNG" alt="sanfinixlogo" />
+              <span >
+                <a href="index.html"><img src="images/Capture.PNG"  alt="sanfinixlogo" /></a>
               </span>
             </div>
             <div class="navbar-collapse">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Testimonials</a>
+                  <a class="nav-link" href="index.html#review">Testimonials</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="about.html">About</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="servers.html">Services</a>
+                <li class="nav-item  Services">
+                  <div class="down">
+                    <div class="select">
+                      <span class="selected">Services</span>
+                      <div class="cart">
+                      
+                        
+                      </div>  
+                    </div>
+                  </div>
+                  <div class="menu">
+                    <ul class="list-menu">
+                      <li class="active"><a href="servers.html#Electrical">Electrical</a></li>
+                      <li class="active"><a href="servers.html#Maintenance">Maintenance</a></li>
+                      <li class="active"><a href="servers.html#Plumbing">Plumbing</a></li>
+                    </ul>
+                  </div>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="contact.html">Contact</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="Apropos.html">A propos</a>
-                </li>
-                <li class="nav-item">
-                  <span>
-                    <img src="images/search.svg" alt="search" />
-                  </span>
+                  <div class="search-btn">
+                    <div id="serch-btn" class="serch-svg" onclick="showserchiputs()">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="20"
+                            fill="black"
+                            class="bi bi-search"
+                            viewBox="0 0 16 16"
+                          >
+                            <path
+                              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+                            />
+                          </svg>
+                      </div>
+                      <div class="input-search">
+                        <input type="text" id="input-srchmobile" placeholder="Search" class="serch-input" />
+                      </div>
+                  </div>
                 </li>
               </ul>
               <div class="icons-list-sersh">
@@ -65,7 +90,7 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item-mobile">
-            <a class="nav-link" href="#">Testimonials</a>
+            <a class="nav-link" href="index.html#review">Testimonials</a>
           </li>
           <li class="nav-item-mobile">
             <a class="nav-link" href="about.html">About</a>
@@ -77,15 +102,12 @@
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item-mobile">
-            <a class="nav-link" href="Apropos.html">A propos</a>
-          </li>
-          <li class="nav-item-mobile">
             <div class="search-btn">
               <div id="serch-btn" class="serch-svg" onclick="showserchiputs()">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="35"
-                  height="35"
+                  width="30"
+                  height="25"
                   fill="#fafafa"
                   class="bi bi-search"
                   viewBox="0 0 16 16"
@@ -96,14 +118,14 @@
                 </svg>
               </div>
               <div class="input-search">
-                <input type="text" id="input-srch" class="serch-input" />
+                <input type="text" id="input-srch" placeholder="Search" class="serch-input" />
               </div>
             </div>
           </li>
         </ul>
       </div>
     <main>
-        <section>
+        <section class="section-home">
            <div class="first-content">
             <div class="content">
                 <h1>Repair and Maintenance Service</h1>
@@ -132,7 +154,7 @@
                 <div class="secnd-content3">
                     <div class="content3-1">
                         <img src="images/Circle-Layer.png" alt="Equipment-Maintenance">
-                        <h1>Equipment  Maintenance</h1>
+                        <h2>Equipment  Maintenance</h2>
                         <p>Our equipment maintenance  ensures that your machinery operates at peak  efficiency</p>
                     </div>
                     <div class="content3-1">
@@ -168,12 +190,45 @@
             </div>
         </section>
 
-        <section class="Clients_riveiw">
+        <section id="review" class="Clients_riveiw">
             <div class="Clients_Testimonial">
                 <h2>Clients Testimonial</h2>
             </div>
-            <div class="Clients_contener">
-                <div class="Clients-cards">
+            <div class="interfase">
+              <div class="Clients_contener">
+                  <div class="Clients-cards">
+                      <div class="Clients-articl">
+                          <h2>Incredible Experience</h2>
+                          <p>We had an incredible experience working with Landify and were impressed they made such
+                               a big difference in only three weeks. Our team is so grateful for the wonderful improvements 
+                              they made and their ability to get familiar with the concept so quickly.
+                          </p>
+                      </div>
+                      <div class="Clients-contimg">
+                          <img src="images/Photo2.png" alt="Clienone">
+                         <article class="article-contimg">
+                          <h2>Sarah Bentaher</h2>
+                          <p>CEO, MA Industires</p>
+                         </article>
+                      </div>
+                  </div>
+                  <div class="Clients-cards">
+                      <div class="Clients-articl">
+                          <h2>Dependable, Responsive, Professional Partner</h2>
+                          <p>Fermin Apps has collaborated with Landify team for several projects such as 
+                              Photo Sharing Appsand Custom Social Networking Apps.
+                               The experience has been pleasant, professional and exceeding our expectations.
+                          </p>
+                      </div>
+                      <div class="Clients-contimg">
+                          <img src="images/Photo.png" alt="Clienonetow">
+                         <article class="article-contimg">
+                          <h2>Salima Alami</h2>
+                          <p>CEO, FOODSO GROUP</p>   
+                         </article>
+                      </div>
+                  </div>
+                  <div class="Clients-cards">
                     <div class="Clients-articl">
                         <h2>Incredible Experience</h2>
                         <p>We had an incredible experience working with Landify and were impressed they made such
@@ -188,8 +243,8 @@
                         <p>CEO, MA Industires</p>
                        </article>
                     </div>
-                </div>
-                <div class="Clients-cards">
+                  </div>
+                  <div class="Clients-cards">
                     <div class="Clients-articl">
                         <h2>Dependable, Responsive, Professional Partner</h2>
                         <p>Fermin Apps has collaborated with Landify team for several projects such as 
@@ -205,6 +260,8 @@
                        </article>
                     </div>
                 </div>
+              </div>
+              
             </div>
         </section>
         <section class="content-Questions" >
@@ -238,10 +295,10 @@
                     <h2>Company</h2>
                     <div  class="list_footer" >
                         <ul class="list">
-                            <li> <a href="">About</a></li>
-                            <li> <a href="">Services</a></li>
+                            <li> <a href="about.html">About</a></li>
+                            <li> <a href="servers.html">Services</a></li>
                             <li> <a href="">Careers</a></li>
-                            <li> <a href="">Contact</a></li>
+                            <li> <a href="contact.html">Contact</a></li>
                             <li> <a href="">Partners</a></li>
                         </ul>
                     </div>

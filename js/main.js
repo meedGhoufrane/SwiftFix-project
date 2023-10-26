@@ -1,3 +1,20 @@
+document.addEventListener('DOMContentLoaded',function(){
+
+const carous = document.querySelector(".Clients_contener");
+const items = document.querySelectorAll(".Clients-cards");
+
+let withitem = items[0].clientWidth;
+let index = 0;
+
+function carousel(){
+  index = (index+1)%items.length;
+  let trensform = -index*withitem;
+  carous.style.transform = `translateX(${trensform}px)`;
+
+}
+
+setInterval(carousel,3000);
+});
 //showdropdownlist
 const navmobile = document.querySelector(".navmobile");
 
@@ -8,15 +25,22 @@ function showdropdownlist() {
 // search button
 function showserchiputs() {
   var inputserch = document.getElementById("input-srch");
-
+  
   if (inputserch.style.display === "none") {
     inputserch.style.display = "block";
-    inputserch.style.transition = ".2s linear";
   } else {
     inputserch.style.display = "none";
-    inputserch.style.transition = ".2s linear";
   }
 }
+
+
+var serverbtn = document.querySelector(".select");
+var menu = document.querySelector(".menu");
+
+serverbtn.addEventListener("click", function(){
+    menu.classList.toggle('menu-open');
+
+});
 
 // validation
 
@@ -28,57 +52,55 @@ var errorldiscr = document.querySelector(".description-error");
 let myform = document.getElementById("form");
 if (myform) {
   myform.addEventListener("submit", function (e) {
-    e.preventDefault();
     let firstname = document.getElementById("firstname");
     let myregex = /^[a-zA-Z]+$/;
-
+    
+      errorfirstname.innerHTML = "";
     if (firstname.value.trim() === "") {
       errorfirstname.innerHTML = "first Nanme is required";
-      errorfirstname.style.color = "red";
-      errorfirstname.style.fontSize = "2rem";
-      errorfirstname.style.textAlign = "center";
+      errorfirstname.classList.add('errormessage');
+      e.preventDefault();
     } else if (myregex.test(firstname.value) == false) {
       errorfirstname.innerHTML = "use only character";
-      errorfirstname.style.color = "red";
-      errorfirstname.style.fontSize = "2rem";
-      errorfirstname.style.textAlign = "center";
+      errorfirstname.classList.add('errormessage');
+      e.preventDefault();
     }
 
     let lastname = document.getElementById("last-name");
-
+      errorlastname.innerHTML = "";
     if (lastname.value.trim() === "") {
       errorlastname.innerHTML = "last Name is required";
-      errorlastname.style.color = "red";
-      errorlastname.style.fontSize = "2rem";
-      errorlastname.style.textAlign = "center";
+      errorlastname.classList.add('errormessage');
+      
+      e.preventDefault();
     } else if (myregex.test(lastname.value) == false) {
       errorlastname.innerHTML = "use only character";
-      errorlastname.style.color = "red";
-      errorlastname.style.fontSize = "2rem";
-      errorlastname.style.textAlign = "center";
+      errorlastname.classList.add('errormessage');
+      e.preventDefault();
+
     }
 
+
     let gmail = document.getElementById("gmail");
+    errorgmail.innerHTML = "";
     let regexgmail = /^[\w\d._%+-]+@(?:[\w\d-]+\.)+(\w{2,})(,|$)/;
     if (gmail.value.trim() === "") {
       errorgmail.innerHTML = "gmail is required";
-      errorgmail.style.color = "red";
-      errorgmail.style.fontSize = "2rem";
-      errorgmail.style.textAlign = "center";
+      errorgmail.classList.add('errormessage');
+      e.preventDefault();
+
     } else if (regexgmail.test(gmail.value) == false) {
       errorgmail.innerHTML = "gmail invalid ! do like med124@gmail.com ";
-      errorgmail.style.color = "red";
-      errorgmail.style.fontSize = "2rem";
-      errorgmail.style.textAlign = "center";
+      errorgmail.classList.add('errormessage');
+      e.preventDefault();
     }
 
     let discrp = document.getElementById("description");
-
+      errorldiscr.innerHTML = "";
     if (discrp.value.trim() === "") {
       errorldiscr.innerHTML = "description is required";
-      errorldiscr.style.color = "red";
-      errorldiscr.style.fontSize = "2rem";
-      errorldiscr.style.textAlign = "center";
+      errorldiscr.classList.add('errormessage');
+      e.preventDefault();
     }
     // else if(discrp.value.lenght < 10 || discrp.value.lenght > 200){
     //   errorldiscr.innerHTML = "Description must be between 10 and 200 characters.";
@@ -108,3 +130,25 @@ questions.forEach(function (question) {
     question.classList.toggle("show-text");
   });
 });
+
+
+
+
+
+
+
+
+// model
+const modalBtn = document.querySelector(".btncll");
+const modal = document.querySelector(".modal-overlay");
+const closeBtn = document.querySelector(".close-btn");
+
+modalBtn.addEventListener("click", function () {
+  modal.classList.add("open-modal");
+});
+closeBtn.addEventListener("click", function () {
+  modal.classList.remove("open-modal");
+});
+
+
+

@@ -260,6 +260,15 @@
   
   textarea {
     overflow: auto;
+    width: 100%;
+    padding: 1.4rem 2rem;
+    font-size: 2rem;
+    border: none;
+    resize: none;
+    border-radius: 3px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
   }
   
   /**
@@ -379,7 +388,6 @@
 .navbar .nav-item {
     margin-right: 1rem;
     padding: 1rem;
-    font-family: 'Poppins', sans-serif;
 }
 .navbar-collapse{
     display: flex;
@@ -405,7 +413,9 @@
     align-content: space-around;
     align-items: center;
 }
-
+.section-home{
+    width: 100%;
+}
 .first-content .content img {
     margin-top: -5rem;
     width: 35rem;
@@ -573,6 +583,7 @@
 }
 .trt-content {
     background: #0c4767;
+    width: 100%;
     padding-bottom: 3rem;
 }
 
@@ -630,10 +641,8 @@
 
 }
 .Clients_riveiw  .Clients_contener{
-    padding-left: 10%;
-    padding-right: 10%;
     display: flex;
-    gap: 2rem;
+    transition: transform .5s ease;
 }
 .Clients-cards{
     justify-content: center;
@@ -641,6 +650,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    min-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
     
     
 }
@@ -698,8 +710,7 @@
 }
 
 .content-Questions{
-    margin-left: 7rem;
-    margin-top: 7rem;
+    padding-top: 7rem;
     background: #ffffff;
     height: 23.375rem;
 }
@@ -796,8 +807,7 @@
 .list{
     list-style: none;
 }
-.aboutus-main{
-}
+
 .aboutusfirtdiv{
     text-align: center;
     font-size: 4rem;
@@ -892,10 +902,15 @@
     width: 40rem;
 }
 .all-inputs > input{
+    width: 100%;
+    padding: 1.4rem 2rem;
     font-size: 2rem;
-    background: #FFF;
-    border: black solid 1px;
-    box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+    resize: none;
+    border-radius: 3px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
 }
 .all-inputs label{
     font-size: 2rem;
@@ -907,6 +922,11 @@
 .General-Questions{
     text-align: center;
     font-size: 1.5rem;
+}
+
+.General-Questions h2{
+    padding-top: 2rem;
+    font-size: 2rem;
 }
 .qustions-ccontaner{
     display: flex;
@@ -947,18 +967,25 @@
     font-size: 14px;
 }
 
+.list-menu{
+    width: 120%;
+    padding: 0;
+    text-align: center;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
 
 /*
-=============== 
 Fonts
-===============
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 /*
-=============== 
 Variables
-===============
+
 */
 
 :root {
@@ -970,7 +997,6 @@ Variables
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  --max-width: 1170px;
   --fixed-width: 620px;
 }
 /* //============= */
@@ -982,12 +1008,6 @@ a {
   text-decoration: none;
 }
 
-img {
-
-}
-
-
-h2,
 h3,
 h4 {
   letter-spacing: var(--spacing);
@@ -996,9 +1016,7 @@ h4 {
   margin-top:2rem;
   font-family: var(--ff-primary);
 }
-h1 {
-  font-size: 3rem;
-}
+
 h2 {
   font-size: 2rem;
 }
@@ -1012,25 +1030,7 @@ p {
   margin-bottom: 1.25rem;
   color: var(--clr-grey-5);
 }
-@media screen and (min-width: 800px) {
- 
- 
-  h3 {
-    font-size: 1.75rem;
-  }
-  h4 {
-    font-size: 1rem;
-  }
-  body {
-    font-size: 1rem;
-  }
-  h1,
-  h2,
-  h3,
-  h4 {
-    line-height: 1;
-  }
-}
+
 /*  global classes */
 
 .btn {
@@ -1059,18 +1059,17 @@ p {
 .section-center {
   width: 90vw;
   margin: 0 auto;
-  max-width: 1170px;
 }
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
   }
 }
-main {
-  min-height: 100vh;
+/* main {
+  min-height: 70vh;
   display: grid;
   place-items: center;
-}
+} */
 /*
 =============== 
 Questions
@@ -1145,15 +1144,125 @@ Questions
 }
 
 
-/* validation form */
+
+/* model */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(73, 166, 233, 0.5);
+    display: none;
+    
+  }
+  /* OPEN/CLOSE MODAL */
+.open-modal {
+    display: block;
+    display: grid;
+    place-items: center;
+  }
+
+   .modal-container{
+    background: #fff;
+    border-radius: var(--radius);
+    width: 60%;
+    height: 50%;
+    max-width: var(--fixed-width);
+    text-align: center;
+    display: grid;
+    place-items: center;
+    position: relative;
+   }
+   .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    background: transparent;
+    border-color: transparent;
+    color: black;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .close-btn:hover {
+    color: var(--clr-red-light);
+    transform: scale(1.3);
+  }
+
+  /* // dropdownserver */
+
+.Services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; 
+}
+.down{
+    min-width: 2rem;
+    position: relative;
+    
+}
+.select{
+    cursor: pointer;
+}
+.select:hover{
+    color: #09679e;
+}
+.cart{
+
+}
+
+.errormessage{
+    text-align :center;
+    font-size :2rem;
+    color : red;
+}
+
+.menu{
+    position: absolute;
+    margin-top: 2rem;
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+  
+}
+.menu-open{
+    opacity: 1;
+    display: block;
+  }
+
+.menu li{
+    cursor: pointer;
+}
 
 
+.search-btn{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    cursor: pointer;
+}
 
+.serch-input{
+    display: none;
+    width: 100%;
+    /* padding: 1.4rem 2rem; */
+    font-size: 1.3rem;
+    border: none;
+    resize: none;
+    border-radius: 3px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
 
-
-
-
-
+.interfase{
+    overflow: hidden;
+    max-width: 100%;
+    
+}
 
 
 
@@ -1193,13 +1302,7 @@ Questions
     z-index: 99;
 
 }
-.input-search{
-    
-    transform: scaleY(1);
-}
-.input-search.is-actives{
-    transform: scaleY(1);
-}
+
 
 
 
@@ -1232,9 +1335,9 @@ Questions
         padding: 0;
 
     }
-    .Clients_riveiw .Clients_contener {
-        flex-direction: column;
-    }
+    /* .Clients_riveiw .Clients_contener {
+
+    } */
     .first-content .content img {
         display: none;
     }
@@ -1309,7 +1412,7 @@ Questions
     gap: 1rem;
 }
 .all-inputs > input{
-    font-size: 3rem;
+    /* font-size: 3rem; */
 }
 .list_flex{
     flex-direction: column;
@@ -1363,9 +1466,9 @@ Questions
 .card-content{
     flex-direction: column;
 }
-#input-srch{
+/* #input-srch{
     display: none;
-}
+} */
 
 }
 
